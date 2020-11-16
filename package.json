@@ -10,7 +10,7 @@
   "author": "Brian Hogan",
   "license": "MIT",
   "dependencies": {
-    "hapi": "^16.4.1"
+    "hapi": "^20.0.2"
   },
   "devDependencies": {
     "code": "^4.0.0",
