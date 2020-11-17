@@ -10,7 +10,7 @@ pipeline {
     }
 
     stages {
-        stage('test') {
+        stage('playing') {
             steps {
                 parallel "test1":{
                     echo 'test1...'
