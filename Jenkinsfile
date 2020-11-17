@@ -13,12 +13,14 @@ pipeline {
         stage('playing') {
             steps {
                 script {
-                    parallel "test1":{
-                        echo 'test1...'
-                    }, "test2":{
-                        echo 'test2...'
-                    }
-                    //parallel(running_set)
+                    parallel([
+                        'test1': {
+                            echo 'test1...'
+                        },
+                        'test2': {
+                            echo 'test2...'
+                        }
+                    ])
                 }
             }
         }
