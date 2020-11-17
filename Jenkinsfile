@@ -15,8 +15,8 @@ pipeline {
                 script {
                     parallel([
                         'test1': {
-                            def userInput = input(id: 'userInput', message: 'Enter something to test input:?')
-                            echo("userInput: ${userInput}")
+                            //def userInput = input(id: 'userInput', message: 'Enter something to test input:?')
+                            //echo("userInput: ${userInput}")
                             echo 'test1...'
                         },
                         'test2': {
