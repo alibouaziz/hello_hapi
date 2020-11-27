@@ -10,6 +10,12 @@ pipeline {
     //}
 
     stages {
+        stage('Test-kube') {
+            steps {
+                echo 'Testing k8s...'
+                sh 'kubectl cluster-info --context kind-kind'
+            }
+        }
         stage('playing') {
             steps {
                 script {
@@ -36,12 +42,6 @@ pipeline {
             steps {
                 echo 'Testing...'
                 sh 'npm test'
-            }
-        }
-        stage('Test-kube') {
-            steps {
-                echo 'Testing k8s...'
-                sh 'kubectl cluster-info --context kind-kind'
             }
         }
     }
