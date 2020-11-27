@@ -2,20 +2,14 @@
 
 pipeline {
 
-    agent none//{
-      //  docker {
-        //    image 'node'
-          //  args '-u root'
-        //}
-    //}
+    agent {
+        docker {
+            image 'node'
+            args '-u root'
+        }
+    }
 
     stages {
-        stage('Test-kube') {
-            steps {
-                echo 'Testing k8s...'
-                sh 'kubectl cluster-info --context kind-kind'
-            }
-        }
         stage('playing') {
             steps {
                 script {
