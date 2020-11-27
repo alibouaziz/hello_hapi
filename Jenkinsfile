@@ -2,7 +2,7 @@
 
 pipeline {
 
-    // agent {
+    agent none//{
       //  docker {
         //    image 'node'
           //  args '-u root'
